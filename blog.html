@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Journal | My Journal</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">My Digital Journal</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Digital Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container text-center">
+     <br> <h1>Digital Journal</h1>
+      <p>My Stories, thoughts, and experiences.</p>
+    </div>
+  </section>
+
+  <!-- BOOTSTRAP GRID SYSTEM - Blog Posts -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- Post 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="C:\Users\Administrator\Downloads\Terminal Assessment - Real\img\p1.jpg" class="card-img-top" alt="Writing">
+            <div class="card-body">
+              <h5 class="card-title">My First Journal Entry</h5>
+              <p class="card-text">Our paper on mini capstone, title defense.</p>
+              <button class="btn btn-outline-primary read-more" data-post="first-post">Read More →</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Post 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="C:\Users\Administrator\Downloads\Terminal Assessment - Real\img\p2.jpg" class="card-img-top" alt="Student life">
+            <div class="card-body">
+              <h5 class="card-title">Being a BSIT Student</h5>
+              <p class="card-text">My experience studying at National Teachers College with my friends.</p>
+              <button class="btn btn-outline-primary read-more" data-post="student">Read More →</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Post 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="C:\Users\Administrator\Downloads\Terminal Assessment - Real\img\p3.jpg" class="card-img-top" alt="Inspiration">
+            <div class="card-body">
+              <h5 class="card-title">NSTP Project</h5>
+              <p class="card-text">Teaching and helping the youth.</p>
+              <button class="btn btn-outline-primary read-more" data-post="inspiration">Read More →</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Post 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="C:\Users\Administrator\Downloads\Terminal Assessment - Real\img\p4.jpg" class="card-img-top" alt="Learning">
+            <div class="card-body">
+              <h5 class="card-title">Learning C++ Programming</h5>
+              <p class="card-text">First time experience on programming languages.</p>
+              <button class="btn btn-outline-primary read-more" data-post="webdev">Read More →</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Post 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="C:\Users\Administrator\Downloads\Terminal Assessment - Real\img\p5.jpg" class="card-img-top" alt="Goals">
+            <div class="card-body">
+              <h5 class="card-title">Setting Goals for 2025</h5>
+              <p class="card-text">My plans and aspirations for this year.</p>
+              <button class="btn btn-outline-primary read-more" data-post="goals">Read More →</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Post 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img src="C:\Users\Administrator\Downloads\Terminal Assessment - Real\img\p6.jpg" class="card-img-top" alt="Books">
+            <div class="card-body">
+              <h5 class="card-title">Me</h5>
+              <p class="card-text">Blangko hahaha hatdog.</p>
+              <button class="btn btn-outline-primary read-more" data-post="books">Read More →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL (Interactive Element) -->
+  <div class="modal fade" id="postModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Journal Entry</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Content loads here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2025 My Digital Journal</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
